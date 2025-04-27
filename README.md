@@ -2,7 +2,7 @@
 
 A comprehensive web application for exploring characters, episodes, and locations from the Rick and Morty universe.
 
-![Rick and Morty Explorer](https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
+![Rick and Morty Explorer](https://yt3.googleusercontent.com/cMxYvYoRuQx8ppkNZsMAkI-aLNFsPrtdwqkuylVnrsUag7Zyhco74kpBmoGOWyriAcfpZltRpw=s900-c-k-c0x00ffffff-no-rj)
 
 ## Features
 
