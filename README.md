@@ -1,111 +1,93 @@
 # Rick and Morty Explorer
 
-A comprehensive web application for exploring characters, episodes, and locations from the Rick and Morty universe.
+**Полноценное веб-приложение для изучения персонажей, эпизодов и локаций вселенной "Рика и Морти".**
 
 ![Rick and Morty Explorer](https://yt3.googleusercontent.com/cMxYvYoRuQx8ppkNZsMAkI-aLNFsPrtdwqkuylVnrsUag7Zyhco74kpBmoGOWyriAcfpZltRpw=s900-c-k-c0x00ffffff-no-rj)
 
-## Features
+## Описание проекта
 
-- Browse and search characters, episodes, and locations from the Rick and Morty series
-- View detailed information about each character, episode, and location
-- Filter characters by status, gender, and species
-- Filter locations by type and dimension
-- Pagination for browsing large datasets
-- Dark/light theme toggle with user preference storage
-- Responsive design for mobile, tablet, and desktop
-- Loading states and skeleton screens for improved user experience
+Rick and Morty Explorer позволяет искать, просматривать и фильтровать персонажей, эпизоды и локации из мультсериала "Рик и Морти". Приложение поддерживает тёмную и светлую темы, работает быстро и адаптивно на всех устройствах.
 
-## Tech Stack
+Я также планировал добавить ИИ для генерации расширенных описаний персонажей, но, к сожалению, возникли технические сложности, которые я не успел решить.
 
-- **Frontend**: React, TypeScript, Tailwind CSS
+---
+
+## Особенности
+
+- Поиск и просмотр персонажей, эпизодов и локаций
+- Детальная информация о каждом элементе
+- Фильтрация персонажей по статусу, полу и виду
+- Фильтрация локаций по типу и измерению
+- Пагинация для больших наборов данных
+- Переключение между тёмной и светлой темами с сохранением предпочтений
+- Адаптивная верстка для мобильных устройств, планшетов и ПК
+- Состояния загрузки и скелетоны для улучшения UX
+
+---
+
+## Технический стек
+
+- **Frontend**: React, Jaavscript, Tailwind CSS
 - **Backend**: Node.js, Express
-- **Routing**: React Router
-- **State Management**: React Context API
-- **API**: Rick and Morty API (via backend proxy)
-- **Icons**: Lucide React
-- **Build Tool**: Vite
+- **Маршрутизация**: React Router
+- **Управление состоянием**: React Context API
+- **API**: Rick and Morty API (через собственный backend-прокси)
+- **Иконки**: Lucide React
+- **Сборка**: Vite
 
-## Why This Tech Stack?
+### Почему выбран этот стек?
 
-- **React & TypeScript**: Provides a robust foundation with type safety, improving code quality and developer experience
-- **Tailwind CSS**: Enables rapid UI development with utility classes while maintaining design consistency
-- **Express Backend**: Creates a secure proxy to the Rick and Morty API, preventing CORS issues and enabling future enhancements
-- **React Router**: Offers declarative routing with code-splitting potential
-- **Context API**: Provides simple state management for theme preferences without additional dependencies
-- **Vite**: Delivers fast development experience and optimized production builds
+- **React**: Один из самых популярных фреймворков для фронтенд разработки, с самым большим коммьюнити.
+- **Tailwind CSS**: Быстрая и удобная стилизация без лишней нагрузки.
+- **Express**: Создание собственного прокси для избежания CORS-проблем и для возможности дальнейших улучшений.
+- **React Router**: Лёгкая маршрутизация с возможностью динамической подгрузки страниц.
+- **Context API**: Простое и нативное управление глобальным состоянием без дополнительных библиотек.
+- **Vite**: Молниеносная сборка и оптимизация проекта для продакшена.
 
-## Installation and Setup
+---
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/rick-and-morty-explorer.git
-   cd rick-and-morty-explorer
-   ```
+## Установка и запуск
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+1. Клонируйте репозиторий:
 
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
+```bash
+git clone https://github.com/yourusername/rick-and-morty-explorer.git
+cd rick-and-morty-explorer
+```
 
-4. For production:
-   ```bash
-   npm run build
-   npm start
-   ```
+2. Установите зависимости:
 
-## Design and Development Process
+```bash
+npm install
+```
 
-1. **Planning**: Started by analyzing the Rick and Morty API to understand available endpoints and data structure.
-2. **Architecture**: Designed a modular component structure with separation of concerns.
-3. **UI Design**: Created a sci-fi inspired interface with portal-like elements referencing the show.
-4. **Implementation**: Built the application in phases - core functionality first, then UI polish, and finally extra features.
-5. **Testing**: Manually tested across devices and browsers for responsiveness and functionality.
+3. Запустите сервер разработки:
 
-## Unique Approaches
+```bash
+npm run dev
+```
 
-- **Portal-inspired animations**: Custom animations for loading states and the 404 page to match the show's aesthetic.
-- **Efficient API usage**: Implemented a backend proxy to reduce API calls and provide better caching.
-- **Adaptive theming**: Not just dark/light mode, but color shifts that change the entire feel of the application between modes.
-- **Progressive loading**: Characters, episodes, and locations are loaded in optimized batches to improve performance.
+4. Для сборки и запуска в продакшене:
 
-## Design Compromises
+```bash
+npm run build
+npm start
+```
 
-- **Image optimization**: Using the original API images rather than optimizing them to reduce complexity, with the tradeoff of slightly longer load times.
-- **Data persistence**: Chose not to implement local data caching to simplify the application, accepting that it requires more API calls.
-- **Feature scope**: Focused on robust core features rather than implementing all possible API functionality, ensuring high quality for the main user journeys.
+---
 
-## Known Issues
+## Процесс проектирования и разработки
 
-- The Rick and Morty API occasionally experiences downtime, during which the application will display error messages.
-- Some character images may load slowly on poor connections due to their original size.
-- The application doesn't maintain search/filter state between page navigations.
+1. **Планирование**: Изучил структуру Rick and Morty API, определил ключевые сущности для отображения.
+2. **Архитектура**: Разработал модульную структуру компонентов с принципом разделения ответственности.
+3. **Дизайн интерфейса**: Создал sci-fi вдохновленный дизайн с элементами порталов, отсылающими к мультфильму.
+4. **Реализация**: Поэтапная разработка: сначала базовая функциональность, затем доработка UI и внедрение дополнительных возможностей.
+5. **Тестирование**: Ручное тестирование на различных устройствах и браузерах для обеспечения стабильности и адаптивности.
 
-## Future Enhancements
+---
 
-- Add local storage caching for recently viewed items
-- Implement favorites functionality for saving preferred characters
-- Add more detailed relationships between characters and locations
-- Integrate with an AI service for additional character insights
-- Optimize images with a media service
+## Известные проблемы
 
-## Deployment
-
-The application can be deployed to various platforms:
-
-- **Vercel/Netlify**: For frontend with serverless functions
-- **Heroku**: For the complete stack with Node.js backend
-- **Docker**: Containerized deployment for custom hosting
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgements
-
-- [Rick and Morty API](https://rickandmortyapi.com/) for providing the data
-- The creators of React, Tailwind, and other open-source tools used in this project
+- Возможные перебои в работе Rick and Morty API приводят к отображению сообщений об ошибке.
+- Медленная загрузка изображений персонажей на медленных интернет-соединениях.
+- Поиск и фильтры не сохраняются при переходе между страницами.
